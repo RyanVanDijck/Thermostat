@@ -2,7 +2,6 @@
     constructor(){
      this.temperature = 20;
      this.powerSaving = true;
-
     }
     up(number){
         if(number + this.temperature <= this.getMaximumTemperature()){
@@ -18,6 +17,12 @@
     }
     getMaximumTemperature(){
         return this.powerSaving ? 25: 32
+    }
+    turnPowerSavingOn(){
+        this.powerSaving = true; 
+    }
+    turnPowerSavingOff(){
+        this.powerSaving = false; 
     }
 
 }
