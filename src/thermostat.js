@@ -5,7 +5,7 @@
     }
     up(number){
         if(number + this.temperature <= this.getMaximumTemperature()){
-            return number + this.temperature
+            return this.temperature += number
         }
         else{
             return 'Maximum temperature is ' +this.getMaximumTemperature()
@@ -26,6 +26,18 @@
     }
     reset(){
         this.temperature = 20; 
+    }
+    getUsage(){
+        
+            if (this.temperature < 18){
+                return 'low-usage';
+            }
+            else if(this.temperature <= 25){
+                return 'medium-usage'; 
+            }
+            else{
+                return 'high-usage'; 
+            }
     }
 
 }

@@ -77,7 +77,7 @@ describe('energy usage', () =>{
     it('high usage', () => {
         const thermostat = new Thermostat();
         thermostat.turnPowerSavingOff(); 
-        thermostat.up(10);
+        thermostat.up(10); 
         expect(thermostat.getUsage()).toEqual('high-usage');
     }); 
 })
