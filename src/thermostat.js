@@ -24,5 +24,8 @@
     turnPowerSavingOff(){
         this.powerSaving = false; 
     }
+    reset(){
+        this.temperature = 20; 
+    }
 
 }
