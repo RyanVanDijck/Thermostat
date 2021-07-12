@@ -26,4 +26,21 @@ describe('temperature tests', function(){
         const thermostat = new Thermostat();
         expect(thermostat.down(12)).toEqual('Minimum temperature is 10'); 
     });
+  
+})
+describe ('power saving', function(){
+    it('power saving on' , function(){
+
+        //SETUP
+        const thermostat = new Thermostat();
+
+        //EXECUTE AND VERIFY
+        expect(thermostat.up(7)).toEqual('Maximum temperature is 25')
+
+
+
+    })
+
+
+
 })
