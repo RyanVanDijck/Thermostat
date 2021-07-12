@@ -36,9 +36,16 @@ describe ('power saving', function(){
 
         //EXECUTE AND VERIFY
         expect(thermostat.up(7)).toEqual('Maximum temperature is 25')
+    })
 
+    it('power saving off' , function(){
 
+        //SETUP
+        const thermostat = new Thermostat();
+        thermostat.turnPowerSavingOff(); 
 
+        //EXECUTE AND VERIFY
+        expect(thermostat.up(100)).toEqual('Maximum temperature is 32')
     })
 
 
