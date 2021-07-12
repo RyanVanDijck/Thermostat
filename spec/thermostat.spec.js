@@ -61,8 +61,23 @@ describe ('power saving', function(){
 
         expect(thermostat.powerSaving).toEqual(false); 
     })
+})
 
-
-
-
+describe('energy usage', () =>{
+    it('low usage', () => {
+        const thermostat = new Thermostat();
+        thermostat.down(5);
+        expect(thermostat.getUsage()).toEqual('low-usage');
+    }); 
+    it('medium usage', () => {
+        const thermostat = new Thermostat();
+        thermostat.up(2);
+        expect(thermostat.getUsage()).toEqual('medium-usage');
+    }); 
+    it('high usage', () => {
+        const thermostat = new Thermostat();
+        thermostat.turnPowerSavingOff(); 
+        thermostat.up(10);
+        expect(thermostat.getUsage()).toEqual('high-usage');
+    }); 
 })
