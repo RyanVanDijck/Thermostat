@@ -22,4 +22,8 @@ describe('temperature tests', function(){
         //EXECUTE and VERIFY
         expect(thermostat.down(10)).toEqual(10);
     })
+    it('minimum temp', () => {
+        const thermostat = new Thermostat();
+        expect(thermostat.down(12)).toEqual('Minimum temperature is 10'); 
+    });
 })
