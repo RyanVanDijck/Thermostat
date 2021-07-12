@@ -2,7 +2,7 @@
     constructor(){
      this.temperature = 20;
     }
-    add(number){
+    up(number){
         return this.temperature += number; 
     }
 

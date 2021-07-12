@@ -8,11 +8,12 @@ describe('temperature tests', function(){
         //EXECUTE and VERIFY
         expect(thermostat.temperature).toEqual(20);
     });
-    it('add function', () => {
+    it('up function', () => {
         //SETUP
         const thermostat = new Thermostat(); 
 
         //EXECUTE and VERIFY
-        expect(thermostat.add(2)).toEqual(22); 
+        expect(thermostat.up(2)).toEqual(22); 
     }); 
+
 })
