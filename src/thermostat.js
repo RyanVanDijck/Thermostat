@@ -5,5 +5,8 @@
     up(number){
         return this.temperature += number; 
     }
+    down(number){
+        return this.temperature -= number;
+    }
 
 }

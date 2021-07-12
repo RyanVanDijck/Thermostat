@@ -15,5 +15,11 @@ describe('temperature tests', function(){
         //EXECUTE and VERIFY
         expect(thermostat.up(2)).toEqual(22); 
     }); 
+    it('down function', () =>{
+        //SETUP
+        const thermostat = new Thermostat();
 
+        //EXECUTE and VERIFY
+        expect(thermostat.down(10)).toEqual(10);
+    })
 })
